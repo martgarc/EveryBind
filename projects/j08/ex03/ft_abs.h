@@ -6,13 +6,13 @@
 /*   By: martgarc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/21 22:56:28 by martgarc          #+#    #+#             */
-/*   Updated: 2018/07/22 22:12:51 by martgarc         ###   ########.fr       */
+/*   Updated: 2018/07/26 19:43:23 by martgarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-#define ABS(Value) value < 0 ? (value * -1) : value
+# define ABS(Value) value < 0 ? (value * -1) : value
 
 #endif
