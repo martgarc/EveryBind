@@ -6,7 +6,7 @@ from modcalc import *
 
 root = Tk()
 root.title("Calculadora")
-#root.resizable(0,0)
+root.resizable(0,0)
 
 frame = Frame(root)
 frame.pack()
