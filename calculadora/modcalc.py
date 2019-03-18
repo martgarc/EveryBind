@@ -137,3 +137,29 @@ def is_num(num):
         return True
     else:
         return False
+
+
+def calc(keyboard_input):
+    while (keyboard_input != 'exit'):
+        if check_syntax(keyboard_input) is False:
+            return('syntax error')
+        else:
+            keyboard_input = put_spaces(keyboard_input, 0)
+            keyboard_input = one_space(keyboard_input)
+            lst = keyboard_input.split(' ')
+            list_atoi(lst)
+            if check_syntax2(lst): 
+                nest_list(lst)
+                try:
+                    for (i, elem) in enumerate(lst):
+                        if type(elem) is list:
+                            while (len(elem) > 1):
+                                operate(elem)
+                            lst[i] = elem[0] 
+                    while (len(lst)) > 1:
+                        operate(lst) 
+                    return(lst[0])
+                except ZeroDivisionError:
+                    return('oo')
+            else:
+                return('syntax error')

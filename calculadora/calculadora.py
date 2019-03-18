@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
+
 from modcalc import *
 keyboard_input = input() #el programa espera a que introduzcas una expresion algebraica desde el teclado
 while (keyboard_input != 'exit'): #mientras no teclees 'exit' el programa seguira esperando input indefinidamente
