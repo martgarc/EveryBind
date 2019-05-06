@@ -31,7 +31,7 @@ static void    operate()
 				k++;
 			}
 			values[j] = atof(temp);
-			memset(temp, 0, 18);
+			memset(temp, 0, 20);
 			if (str[i] != '=')
 				operands[j] = str[i];
 			j++;
@@ -39,7 +39,8 @@ static void    operate()
 		}
 		i++;
 	}
-//values[i] = NULL
+	operands[j] = '\0';
+//values[i] = '\0';
 	i = 0;
 	while (operands[i])
 	{
@@ -52,6 +53,7 @@ static void    operate()
 					values[j] = values[j+1];
 				for (j = i; operands[j]; j++)
 					operands[j] = operands[j+1];
+				i--;
 			}
 			if (operands[i] == '/')
 			{
@@ -60,6 +62,7 @@ static void    operate()
 					values[j] = values[j+1];
 				for (j = i; operands[j]; j++)
 					operands[j] = operands[j+1];
+				i--;
 			}
 		}
 		i++;
@@ -77,6 +80,7 @@ static void    operate()
 					values[j] = values[j+1];
 				for (j = i; operands[j]; j++)
 					operands[j] = operands[j+1];
+				i--;
 			}
 			if (operands[i] == '-')
 			{
@@ -85,6 +89,7 @@ static void    operate()
 					values[j] = values[j+1];
 				for (j = i; operands[j]; j++)
 					operands[j] = operands[j+1];
+				i--;
 			}
 		}
 		i++;
